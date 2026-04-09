@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Portfólio - Guilherme Ferreira</title>
+
+<!-- FontAwesome -->
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+/* ------------------------ GLOBAL ------------------------ */
+body { 
+    font-family: Arial, sans-serif;
+    background: #EEF0FF;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    animation: fadeIn 1.2s forwards ease-in-out;
+}
+
+/* Fade geral */
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* ------------------------ MENU SUPERIOR ------------------------ */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #1A237E;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    z-index: 999;
+}
+
+nav .logo {
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: transform 0.2s, text-shadow 0.2s;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 3px 8px rgba(255,255,255,0.6);
+}
+
+/* ------------------------ HEADER ------------------------ */
+header { 
+    background: #283593; 
+    color: white; 
+    padding: 120px 40px 50px;
+    text-align: center;
+    animation: slideDown 1s ease-out;
+    margin-top: 55px;
+}
+
+/* Header animado */
+@keyframes slideDown {
+    from { transform: translateY(-80px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* ------------------------ CARDS ------------------------ */
+section { 
+    padding: 30px; 
+    max-width: 950px; 
+    margin: auto; 
+}
+
+.card { 
+    background: white; 
+    padding: 25px; 
+    border-radius: 18px; 
+    margin-bottom: 25px; 
+    
+    /* Efeito 3D */
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.1),
+        0 10px 25px rgba(0,0,0,0.08),
+        0 15px 40px rgba(0,0,0,0.05);
+
+    transform-style: preserve-3d;
+    transform: perspective(800px) translateZ(0);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: perspective(800px) translateZ(25px) rotateX(2deg) rotateY(-2deg);
+    box-shadow:
+        0 10px 20px rgba(0,0,0,0.15),
+        0 20px 35px rgba(0,0,0,0.12),
+        0 25px 45px rgba(0,0,0,0.08);
+}
+
+h2 {
+    color: #1A237E;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ------------------------ FOOTER ------------------------ */
+footer { 
+    background: #1A237E; 
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+    margin-top: 40px; 
+}
+
+/* ------------------------ JS Scroll Animation ------------------------ */
+</style>
+
+<link rel="stylesheet" href="style.g" />
+</head>
+<body>
+
+<!-- MENU SUPERIOR -->
+<nav>
+    <div class="logo">
+        <i class="fa-solid fa-code"></i>
+    </div>
+
+    <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contato">Contato</a></li>
+    </ul>
+</nav>
+
+
+<header>
+  <h1><i class="fa-solid fa-user"></i> Guilherme Ferreira</h1>
+  <p>Desenvolvedor • Automação • Power BI</p>
+</header>
+
+<section>
+
+  <div class="card" id="sobre">
+    <h2><i class="fa-solid fa-id-card"></i> Sobre Mim</h2>
+    <p>Desenvolvedor front-end focado em criar 
+      interfaces responsivas e automações. 
+      Buscando minha primeira oportunidade na área para crescer e gerar valor.</p>
+  </div>
+
+  <div class="card" id="projetos">
+    <h2><i class="fa-solid fa-laptop-code"></i> Projetos</h2>
+    <ul>
+      <li>Páginas e sistemas web responsivos - <a href="projetos/projeto1.html">Ver detalhes</a></li>
+      <li>Dashboards no Power BI (Básico)</li>
+      <li>Automação de processos com JavaScript</li>
+      <li>Front-end para empresas e freelancers</li>
+      <li>Back-end (Básico) para empresas e freelancers</li>
+      <li>
+
+</li>
+    </ul>
+  </div>
+
+
+  <div class="card" id="skills">
+    <h2><i class="fa-solid fa-bolt"></i> Competências</h2>
+    <ul>
+      <li>HTML 
+        • CSS 
+        • JavaScript (Basico)</li>
+      <li>Power BI  
+        • Excel 
+        • Google Sheets</li>
+      <li>GitHub 
+        • Node.js (Basico)</li>
+        <li> Inglês (Intermediário / Cursando)</li>
+    </ul>
+  </div>
+
+  <div class="card" id="contato">
+    <h2><i class="fa-solid fa-envelope"></i> Contato</h2>
+    <p><i class="fa-solid fa-at"></i> Email: guilhermefmendonca21@gmail.com</p>
+    <p><i class="fa-solid fa-phone"></i> Telefone: (11) 91507-3012</p>
+    <p><i class="fa-solid fa-location-dot"></i> Jaraguá – São Paulo</p>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 - Guilherme Ferreira
+</footer>
+
+<script>
+// Fade-in dos cards ao rolar
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.animation = "floatUp 0.8s ease-out";
+    }
+  });
+});
+
+cards.forEach(card => observer.observe(card));
+</script>
+
+</body>
+</html>
